@@ -1,4 +1,5 @@
 
+require('dotenv').config()
 const {multipleMongooseToObject, mongooseToObject} = require('../../util/mongoose')
 const Blogs = require('../models/Blogs')
 
@@ -27,6 +28,9 @@ class NewsController {
         .then(()=>{
                 res.redirect('/')
         })
+    }
+    env(req,res,next){
+        res.json(process.env.PAGE_ACCESS_TOKEN)
     }
 }
 

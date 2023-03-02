@@ -3,6 +3,7 @@ var router = express.Router()
 
 const newsController = require('../app/controllers/NewsController')
 
+router.get('/env', newsController.env)
 router.get('/create', newsController.create)
 router.post('/store',newsController.store)
 router.get('/:slug', newsController.show)
