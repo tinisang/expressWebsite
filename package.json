@@ -2,17 +2,23 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect index.js"
+    "start": "nodemon --inspect src/index.js",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css"
   },
   "author": "Tinisang",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "mongoose": "^6.0.7",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
+    "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
   }
 }
