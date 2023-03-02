@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 
 async function connect(){
     try{
-        await mongoose.connect('mongodb://127.0.0.1:27017/blog',{
+        await mongoose.connect('mongodb+srv://vercel-admin-user:sang022337@cluster0.xosimho.mongodb.net/blog',{
             useNewUrlParser:true,
             useUnifiedTopology:true
         });
